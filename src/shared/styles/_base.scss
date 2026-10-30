@@ -1,0 +1,91 @@
+@use 'shared/styles/variables' as v;
+
+:root {
+  --bg: #{v.$color-bg};
+  --bg-elevated: #{v.$color-bg-elevated};
+  --border: #{v.$color-border};
+  --text: #{v.$color-text};
+  --text-h: #{v.$color-text-strong};
+  --code-bg: #{v.$color-code-bg};
+
+  --accent: #{v.$color-accent};
+  --accent-strong: #{v.$color-accent-strong};
+  --accent-bg: #{v.$color-accent-bg};
+  --accent-border: #{v.$color-accent-border};
+
+  --danger: #{v.$color-danger};
+  --danger-bg: #{v.$color-danger-bg};
+  --danger-border: #{v.$color-danger-border};
+
+  --shadow: #{v.$shadow};
+
+  --sans: #{v.$font-sans};
+  --mono: #{v.$font-mono};
+
+  color-scheme: dark;
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: v.$breakpoint-tablet) {
+    font-size: 16px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  font-family: var(--sans);
+  font-weight: 500;
+  color: var(--text-h);
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 22px;
+  letter-spacing: -0.24px;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent-strong);
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  border-radius: #{v.$radius-sm};
+  background: var(--code-bg);
+  color: var(--text-h);
+}

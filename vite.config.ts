@@ -10,4 +10,11 @@ export default defineConfig({
     },
     tsconfigPaths: true,
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        loadPaths: [fileURLToPath(new URL('./src', import.meta.url))],
+      },
+    },
+  },
 })

@@ -1,0 +1,152 @@
+@use 'shared/styles/variables' as v;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.field-required {
+  color: var(--danger);
+  margin-left: 2px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: v.$radius-sm;
+  background: var(--bg-elevated);
+  color: var(--text-h);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.field-checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: v.$radius-sm;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text-h);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.banner {
+  padding: 10px 14px;
+  border-radius: v.$radius-sm;
+  font-size: 14px;
+  text-align: left;
+}
+
+.banner-error {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid var(--danger-border);
+}
+
+.banner-info {
+  background: var(--accent-bg);
+  color: var(--text-h);
+  border: 1px solid var(--accent-border);
+}
+
+.crud-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: v.$radius-md;
+  background: var(--bg-elevated);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.crud-form-actions {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.crud-table-wrapper {
+  overflow-x: auto;
+}
+
+table.crud-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+table.crud-table th,
+table.crud-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+table.crud-table th {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+table.crud-table tbody tr:hover {
+  background: var(--code-bg);
+}
+
+.crud-table-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.crud-empty {
+  padding: 16px;
+  text-align: center;
+  color: var(--text);
+}

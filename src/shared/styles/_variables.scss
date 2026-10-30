@@ -1,0 +1,27 @@
+// Tema escuro, paleta puxada para o azul.
+
+$color-bg: #0b1120;
+$color-bg-elevated: #121a2e;
+$color-border: #263047;
+$color-text: #9fb0cc;
+$color-text-strong: #eef2fb;
+$color-code-bg: #16203a;
+
+$color-accent: #4c8dff;
+$color-accent-strong: #79aaff;
+$color-accent-bg: rgba(76, 141, 255, 0.14);
+$color-accent-border: rgba(76, 141, 255, 0.45);
+
+$color-danger: #f0545c;
+$color-danger-bg: rgba(240, 84, 92, 0.12);
+$color-danger-border: rgba(240, 84, 92, 0.32);
+
+$shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.45), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+
+$font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+$font-mono: ui-monospace, Consolas, monospace;
+
+$radius-sm: 6px;
+$radius-md: 8px;
+
+$breakpoint-tablet: 1024px;
